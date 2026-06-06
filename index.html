@@ -363,7 +363,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 <div class="modal-bg" id="modal-bg">
   <div class="modal" id="modal-box" data-title="ACCESO // GITHUB TOKEN">
     <button class="close-x" onclick="closeModal()">[ X ]</button>
-    <div id="modal-inner"><h3>Modo Administrador</h3><p style="font-size:0.75rem; color:var(--muted); margin-bottom:1rem;">Ingresa tu Personal Access Token.</p><input type="password" id="pwd-input" placeholder="ghp_..." onkeydown="if(event.key==='Enter')tryLogin()"><p class="pwd-err" id="pwd-err">Token inválido.</p><div class="modal-btns"><button class="btn-ok" onclick="tryLogin()">Ingresar</button><button class="btn-no" onclick="closeModal()">Cancelar</button></div></div>
+    <div id="modal-inner"><h3>Modo Administrador</h3><p style="font-size:0.75rem; color:var(--muted); margin-bottom:1rem;">Ingresa tu Personal Access Token.</p><input type="password" id="pwd-input" placeholder="ghp_..." onkeydown="if(event.key==='Enter')tryLogin()"><p class="pwd-err" id="pwd-err" style="display: block;">Token inválido.</p><div class="modal-btns"><button class="btn-ok" onclick="tryLogin()">Ingresar</button><button class="btn-no" onclick="closeModal()">Cancelar</button></div></div>
   </div>
 </div>
 
