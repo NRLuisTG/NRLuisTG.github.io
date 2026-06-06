@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es" data-lt-installed="true"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NRLuisTG · Luis Gustavo Cabellos Villegas</title>
 <meta name="description" content="Portafolio de Luis Gustavo Cabellos Villegas — Fotógrafo profesional y creador audiovisual. Luminax Studio · Alpha Productions · Lima, Perú.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -195,7 +194,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 ::-webkit-scrollbar-thumb{background:var(--accent1)}
 </style>
 </head>
-<body>
+<body class="">
 
 <nav>
   <a href="#hero" class="nav-logo">NR<em>LUIS</em>TG</a>
@@ -206,7 +205,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
     <li><a href="#youtube">youtube</a></li>
   </ul>
   <div class="admin-only-block" style="gap: 1rem; align-items: center;">
-    <button class="admin-pill" id="btn-save-web" onclick="savePageToGitHub()" style="color:#10B981; border-color:#10B981; background:rgba(16,185,129,0.1);">⬡ GUARDAR WEB</button>
+    <button class="admin-pill" id="btn-save-web" onclick="savePageToGitHub()" style="color: rgb(16, 185, 129); border-color: rgb(16, 185, 129); background: rgba(16, 185, 129, 0.1); pointer-events: none;">⬡ GUARDAR WEB</button>
     <button class="admin-pill" onclick="logoutAdmin()">⬡ ADMIN · salir</button>
   </div>
 </nav>
@@ -259,7 +258,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
     <div>
       <div class="panel-box" data-label="DATOS.JSON">
         <table class="data-tbl">
-          <tr><td>nombre</td><td>Luis Gustavo Cabellos Villegas</td></tr>
+          <tbody><tr><td>nombre</td><td>Luis Gustavo Cabellos Villegas</td></tr>
           <tr><td>alias</td><td>NRLuisTG</td></tr>
           <tr><td>origen</td><td>Cajamarca, Perú</td></tr>
           <tr><td>base</td><td>Santiago de Surco, Lima</td></tr>
@@ -272,7 +271,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
           <tr><td>instagram</td><td><a href="https://www.instagram.com/luminax_std/" target="_blank">@luminax_std</a></td></tr>
           <tr><td>ig personal</td><td><a href="https://www.instagram.com/nrluistg/" target="_blank">@nrluistg</a></td></tr>
           <tr><td>youtube</td><td><a href="https://www.youtube.com/@NRLuisTG" target="_blank">@NRLuisTG</a></td></tr>
-        </table>
+        </tbody></table>
       </div>
     </div>
   </div>
@@ -318,19 +317,19 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   <div class="yt-hero-box">
     <div class="yt-badge"><div class="yt-tri"></div></div>
     <div class="yt-ch-info">
-      <h3 id="yt-cname">NR Luis TG</h3>
+      <h3 id="yt-cname">NRLuisTG</h3>
       <p id="yt-cdesc">Canal de YouTube donde comparto proyectos visuales, contenido audiovisual y mi perspectiva detrás del lente. Edita esta sección con la historia real de tu canal.</p>
-      <a href="https://www.youtube.com/@NRLuisTG" target="_blank" class="yt-ch-link" id="yt-clink">▸ youtube.com/@NRLuisTG</a>
+      <a href="https://www.youtube.com/@NRLuisTG" target="_blank" class="yt-ch-link" id="yt-clink">▸ www.youtube.com/@NRLuisTG</a>
     </div>
   </div>
   <!-- Panel de config: solo visible en modo admin -->
   <div class="yt-cfg">
     <div class="yt-cfg-g">
-      <input type="text" id="yti-name" placeholder="Nombre del canal" value="NR Luis TG">
+      <input type="text" id="yti-name" placeholder="Nombre del canal" value="NRLuisTG">
       <input type="text" id="yti-url" placeholder="URL del canal" value="https://www.youtube.com/@NRLuisTG">
     </div>
     <div class="yt-cfg-r2">
-      <input type="text" id="yti-desc" placeholder="Historia y descripción del canal...">
+      <input type="text" id="yti-desc" placeholder="Historia y descripción del canal..." value="">
       <button class="btn-new" onclick="saveChannel()">guardar</button>
     </div>
   </div>
@@ -362,9 +361,9 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 
 <!-- MODAL -->
 <div class="modal-bg" id="modal-bg">
-  <div class="modal" id="modal-box" data-title="INPUT">
+  <div class="modal" id="modal-box" data-title="ACCESO // LUMINAX ADMIN">
     <button class="close-x" onclick="closeModal()">[ X ]</button>
-    <div id="modal-inner"></div>
+    <div id="modal-inner"><h3>Modo Administrador</h3><p style="font-size:0.75rem; color:var(--muted); margin-bottom:1rem;">Ingresa tu Personal Access Token. El sistema lo verificará directamente con los servidores de GitHub.</p><input type="password" id="pwd-token" placeholder="Pega tu Token de GitHub (ghp_...)" onkeydown="if(event.key==='Enter')tryLogin()"><p class="pwd-err" id="pwd-err" style="display: block;">Token rechazado por los servidores de GitHub.</p><div class="modal-btns"><button class="btn-ok" id="btn-login" onclick="tryLogin()" style="pointer-events: auto;">Verificar</button><button class="btn-no" onclick="closeModal()">Cancelar</button></div></div>
   </div>
 </div>
 
@@ -615,5 +614,6 @@ function saveChannel(){
   alert('Cambios del canal aplicados. Recuerda presionar "GUARDAR WEB" arriba para subirlos.');
 }
 </script>
-</body>
-</html>
+
+
+</body></html>
