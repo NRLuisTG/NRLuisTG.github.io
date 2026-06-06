@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-lt-installed="true"><head>
+<html lang="es" suppresshydrationwarning="true" data-lt-installed="true"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NRLuisTG · Luis Gustavo Cabellos Villegas</title>
@@ -318,7 +318,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
     <div class="yt-badge"><div class="yt-tri"></div></div>
     <div class="yt-ch-info">
       <h3 id="yt-cname">NR Luis TG</h3>
-      <p id="yt-cdesc">NRLuisTG nació de la resiliencia tras el cierre de dos proyectos previos. Empecé desde cero y con una computadora de recursos mínimos, lo que convirtió la falta de hardware en mi mayor ventaja: me obligó a exprimir al máximo mis conocimientos audiovisuales y de edición para compensar las limitaciones técnicas.  Esa etapa fue el impulso para evolucionar. Poco a poco, fui mejorando mis herramientas y puliendo cada detalle de postproducción hasta consolidar el distintivo sello visual verde que hoy define a la marca. Hoy, este canal es el resultado directo de ese esfuerzo constante: un espacio donde la técnica audiovisual, la narrativa y la calidad visual se imponen en cada video.</p>
+      <p id="yt-cdesc">NRLuisTG nació de la resiliencia tras el cierre de dos proyectos previos. Empecé desde cero y con una computadora de recursos mínimos, lo que convirtió la falta de hardware en mi mayor ventaja: me obligó a exprimir al máximo mis conocimientos audiovisuales y de edición para compensar las limitaciones técnicas. Esa etapa fue el impulso para evolucionar. Poco a poco, fui mejorando mis herramientas y puliendo cada detalle de postproducción hasta consolidar el distintivo sello visual verde que hoy define a la marca. Hoy, este canal es el resultado directo de ese esfuerzo constante: un espacio donde la técnica audiovisual, la narrativa y la calidad visual se imponen en cada video.</p>
       <a href="https://www.youtube.com/@NRLuisTG" target="_blank" class="yt-ch-link" id="yt-clink">▸ www.youtube.com/@NRLuisTG</a>
     </div>
   </div>
@@ -556,6 +556,44 @@ function saveChannel(){
   if(n)document.getElementById('yt-cname').textContent=n; if(d)document.getElementById('yt-cdesc').textContent=d;
   if(u){const a=document.getElementById('yt-clink');a.href=u;a.textContent='▸ '+u.replace('https://','');}
 }
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
 </script>
 
 
