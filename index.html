@@ -318,7 +318,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
     <div class="yt-badge"><div class="yt-tri"></div></div>
     <div class="yt-ch-info">
       <h3 id="yt-cname">NRLuisTG</h3>
-      <p id="yt-cdesc">NRLuisTG nació de la resiliencia tras el cierre de dos proyectos previos. Empecé desde cero y con una computadora de recursos mínimos, lo que convirtió la falta de hardware en mi mayor ventaja: me obligó a exprimir al máximo mis conocimientos audiovisuales y de edición para compensar las limitaciones técnicas.  Esa etapa fue el impulso para evolucionar. Poco a poco, fui mejorando mis herramientas y puliendo cada detalle de postproducción hasta consolidar el distintivo sello visual verde que hoy define a la marca. Hoy, este canal es el resultado directo de ese esfuerzo constante: un espacio donde la técnica audiovisual, la narrativa y la calidad visual se imponen en cada video.</p>
+      <p id="yt-cdesc">Canal de YouTube donde comparto proyectos visuales, contenido audiovisual y mi perspectiva detrás del lente. Edita esta sección con la historia real de tu canal.</p>
       <a href="https://www.youtube.com/@NRLuisTG" target="_blank" class="yt-ch-link" id="yt-clink">▸ www.youtube.com/@NRLuisTG</a>
     </div>
   </div>
@@ -329,7 +329,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
       <input type="text" id="yti-url" placeholder="URL del canal" value="https://www.youtube.com/@NRLuisTG">
     </div>
     <div class="yt-cfg-r2">
-      <input type="text" id="yti-desc" placeholder="Historia y descripción del canal..." value="NRLuisTG nació de la resiliencia tras el cierre de dos proyectos previos. Empecé desde cero y con una computadora de recursos mínimos, lo que convirtió la falta de hardware en mi mayor ventaja: me obligó a exprimir al máximo mis conocimientos audiovisuales y de edición para compensar las limitaciones técnicas.  Esa etapa fue el impulso para evolucionar. Poco a poco, fui mejorando mis herramientas y puliendo cada detalle de postproducción hasta consolidar el distintivo sello visual verde que hoy define a la marca. Hoy, este canal es el resultado directo de ese esfuerzo constante: un espacio donde la técnica audiovisual, la narrativa y la calidad visual se imponen en cada video.">
+      <input type="text" id="yti-desc" placeholder="Historia y descripción del canal..." value="">
       <button class="btn-new" onclick="saveChannel()">guardar</button>
     </div>
   </div>
@@ -363,7 +363,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 <div class="modal-bg" id="modal-bg">
   <div class="modal" id="modal-box" data-title="ACCESO // LUMINAX ADMIN">
     <button class="close-x" onclick="closeModal()">[ X ]</button>
-    <div id="modal-inner"><h3>Modo Administrador</h3><p style="font-size:0.75rem; color:var(--muted); margin-bottom:1rem;">Ingresa tu Personal Access Token. El sistema lo verificará directamente con los servidores de GitHub.</p><input type="password" id="pwd-token" placeholder="Pega tu Token de GitHub (ghp_...)" onkeydown="if(event.key==='Enter')tryLogin()"><p class="pwd-err" id="pwd-err" style="display: block;">Token rechazado por los servidores de GitHub.</p><div class="modal-btns"><button class="btn-ok" id="btn-login" onclick="tryLogin()" style="pointer-events: auto;">Verificar</button><button class="btn-no" onclick="closeModal()">Cancelar</button></div></div>
+    <div id="modal-inner"><h3>Modo Administrador</h3><p style="font-size:0.75rem; color:var(--muted); margin-bottom:1rem;">Ingresa tu Personal Access Token. El sistema lo verificará directamente con los servidores de GitHub.</p><input type="password" id="pwd-token" placeholder="Token guardado en este navegador" onkeydown="if(event.key==='Enter')tryLogin()"><p style="font-size:0.6rem; color:#10B981; margin-bottom:0.5rem; margin-top:-0.3rem;">✓ Se usará el token guardado si dejas esto en blanco.</p><p class="pwd-err" id="pwd-err">Token inválido o revocado por GitHub.</p><div class="modal-btns"><button class="btn-ok" id="btn-login" onclick="tryLogin()" style="pointer-events: auto;">Verificar</button><button class="btn-no" onclick="closeModal()">Cancelar</button></div></div>
   </div>
 </div>
 
